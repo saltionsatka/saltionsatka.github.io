@@ -1,4 +1,5 @@
-// Reveal on scroll
+// Reveal / Hide on scroll (fade-in on scroll down, fade-out on scroll up)
+
 const reveals = document.querySelectorAll(".reveal");
 
 function handleReveal() {
@@ -7,8 +8,14 @@ function handleReveal() {
 
   reveals.forEach(el => {
     const rect = el.getBoundingClientRect();
+
+    // Fade IN when scroll down
     if (rect.top < windowHeight - threshold) {
       el.classList.add("visible");
+    } 
+    // Fade OUT when scroll up
+    else {
+      el.classList.remove("visible");
     }
   });
 }
