@@ -42,7 +42,7 @@ body {
 }
 
 :root.light body {
-  background: #f5f6fa;
+  background: radial-gradient(circle at top, #ffffff, #dfe4f5 60%);
 }
 
 
