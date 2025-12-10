@@ -2,88 +2,276 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <title>Saltion Satka | Software Developer Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Saltion Satka | Portfolio</title>
-  <style>
-    body { margin:0; font-family: Inter, Arial; background:#0e0e0e; color:#f5f5f5; }
-    header { padding:80px 20px; text-align:center; background:linear-gradient(135deg,#1f1f1f,#0e0e0e); }
-    header h1 { font-size:3rem; margin-bottom:10px; }
-    header p { font-size:1.2rem; opacity:0.8; }
-    nav { display:flex; justify-content:center; gap:30px; padding:20px; background:#111; position:sticky; top:0; }
-    nav a { color:#f5f5f5; text-decoration:none; font-size:1rem; opacity:0.8; }
-    nav a:hover { opacity:1; }
-    section { max-width:1100px; margin:60px auto; padding:0 20px; }
-    h2 { font-size:2rem; margin-bottom:20px; }
-    .grid { display:grid; gap:20px; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); }
-    .card { background:#1a1a1a; padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.3); transition:0.2s; }
-    .card:hover { transform:translateY(-4px); }
-    .card h3 { margin-top:0; }
-    a.btn { display:inline-block; margin-top:10px; padding:10px 16px; border-radius:8px; background:#4b66ff; color:white; text-decoration:none; }
-    footer { text-align:center; padding:40px; opacity:0.7; font-size:0.9rem; }
-  </style>
+
+  <!-- Font Awesome for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-0ZcQd7..."
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <header>
-    <h1>Saltion Satka</h1>
-    <p>.NET Developer | Angular | SQL | Docker | Cloud (in progress)</p>
+  <!-- Navigation -->
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="logo">SS</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn-outline" href="#contact">Hire Me</a>
+    </div>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I am a .NET developer transitioning toward cloud-native engineering. I focus on backend development, APIs, database design, and building modern full‑stack applications. Currently expanding into Docker, Kubernetes, and Azure to become a production‑ready engineer for Malta job market.</p>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div id="repo-list" class="grid">Loading projects…</div>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="grid">
-      <div class="card"><h3>.NET / C#</h3><p>API Development, Clean Architecture, EF Core</p></div>
-      <div class="card"><h3>Angular</h3><p>Components, Services, Routing, RxJS</p></div>
-      <div class="card"><h3>SQL</h3><p>MySQL, SQL Server, Joins, Indexing</p></div>
-      <div class="card"><h3>DevOps</h3><p>GitHub Actions, Docker, CI foundations</p></div>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content reveal">
+      <p class="hero-tag">Software Developer • .NET & Frontend</p>
+      <h1>Hi, I’m <span>Saltion Satka</span>.</h1>
+      <p class="hero-subtitle">
+        I’m a .NET / JavaScript developer from Tirana, currently sharpening my
+        cloud-native skills and actively preparing to relocate and work in Malta.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">
+          <i class="fa-solid fa-code"></i> View Projects
+        </a>
+        <a href="assets/Saltion_Satka_CV.pdf" class="btn-secondary" download>
+          <i class="fa-solid fa-file-arrow-down"></i> Download CV
+        </a>
+      </div>
+      <div class="hero-meta">
+        <span><i class="fa-solid fa-location-dot"></i> Tirana → Open to relocate to Malta</span>
+        <span><i class="fa-solid fa-briefcase"></i> 3+ years professional experience</span>
+      </div>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:saltionsatka@gmail.com" style="color:#4b66ff;">saltionsatka@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/saltionsatka" target="_blank" style="color:#4b66ff;">https://github.com/saltionsatka</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/saltion-satka" target="_blank" style="color:#4b66ff;">https://www.linkedin.com/in/saltion-satka</a></p>
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="section-inner reveal">
+      <h2>About Me</h2>
+      <p>
+        I’m a software developer focused on building clean, maintainable web applications with
+        <strong>.NET Core/C#</strong>, modern JavaScript frameworks, and solid database design. I enjoy taking
+        existing systems, understanding how they really work, and then improving their structure, performance,
+        and developer experience.
+      </p>
+      <p>
+        Right now, I’m actively preparing to transition into a more cloud-native role, consolidating my skills in
+        <strong>ASP.NET Core APIs, SQL, Angular, Docker, Kubernetes, and Azure</strong>. My goal is to join a strong
+        engineering team in <strong>Malta</strong>, contribute from day one, and grow into a mid-level/senior
+        backend or full-stack developer.
+      </p>
+    </div>
   </section>
 
-  <footer>
-    © 2025 Saltion Satka — Portfolio hosted on GitHub Pages
+  <!-- Skills -->
+  <section id="skills" class="section section-alt">
+    <div class="section-inner reveal">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3><i class="fa-solid fa-server"></i> Backend</h3>
+          <ul>
+            <li>.NET Core / C#</li>
+            <li>REST APIs & Web Services</li>
+            <li>Entity Framework Core</li>
+            <li>Clean, layered architecture</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3><i class="fa-solid fa-window-maximize"></i> Frontend</h3>
+          <ul>
+            <li>React.js, Vue.js</li>
+            <li>Angular (in progress)</li>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Responsive UI development</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3><i class="fa-solid fa-cloud"></i> Cloud & DevOps</h3>
+          <ul>
+            <li>Microsoft Azure (cloud-ready development)</li>
+            <li>Docker, containerized workflows</li>
+            <li>Growing experience with Kubernetes</li>
+            <li>Git & GitHub, CI/CD foundations</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3><i class="fa-solid fa-database"></i> Databases & Other</h3>
+          <ul>
+            <li>SQL (MySQL, SQL Server)</li>
+            <li>Laravel / PHP</li>
+            <li>REST API design & integration</li>
+            <li>Agile teams & cross-functional collaboration</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Timeline -->
+  <section id="experience" class="section">
+    <div class="section-inner reveal">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>.NET & React Developer – MRK Group GmbH (Tirana)</h3>
+            <span class="timeline-date">Mar 2023 – Present</span>
+            <p>
+              Worked on an HRMS platform: implemented updates and new features, improved system performance
+              and stability, debugged production issues, and supported end-users by providing technical guidance.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Vue.js Freelancer – Tirana</h3>
+            <span class="timeline-date">Nov 2023 – Jan 2024</span>
+            <p>
+              Built UI components and real-time appointment scheduling workflows for a barber–client web
+              application using Vue.js and state management.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Full-Stack Developer – Inovacioni Sh.p.k (Tirana)</h3>
+            <span class="timeline-date">Jan 2020 – Dec 2020</span>
+            <p>
+              Developed and maintained web applications using ASP.NET Core and React, focusing on clean code,
+              performance improvements, and upgrading existing systems.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Laravel & Vue.js Developer – STREAMUP Sh.p.k</h3>
+            <span class="timeline-date">Apr 2019 – Dec 2019</span>
+            <p>
+              Contributed to HRMS and education systems using Laravel and Vue.js, implementing new modules,
+              fixing bugs, and improving existing features.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section section-alt">
+    <div class="section-inner reveal">
+      <h2>Selected Projects</h2>
+      <p class="section-subtitle">
+        These are some of the projects I’ve built and pushed to GitHub. I use them to experiment, learn, and
+        demonstrate how I design and structure applications.
+      </p>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <h3>Blogsite</h3>
+          <p>
+            A blog platform demonstrating CRUD, routing, and UI structure. Useful as a playground for experimenting
+            with authentication, comments, and authoring workflows.
+          </p>
+          <a href="https://github.com/saltionsatka/Blogsite" target="_blank" class="project-link">
+            <i class="fa-brands fa-github"></i> View on GitHub
+          </a>
+        </article>
+
+        <article class="project-card">
+          <h3>E-Commerce</h3>
+          <p>
+            E-commerce application skeleton showing product listing, basic catalog features, and typical flows you’d
+            find in an online shop (good base to extend with carts, checkout, and payments).
+          </p>
+          <a href="https://github.com/saltionsatka/E-Commerce" target="_blank" class="project-link">
+            <i class="fa-brands fa-github"></i> View on GitHub
+          </a>
+        </article>
+
+        <article class="project-card">
+          <h3>Todo List</h3>
+          <p>
+            A simple to-do list application used to practice state handling, UI feedback, and small but complete
+            app structure. Ideal for showing clean, minimal code.
+          </p>
+          <a href="https://github.com/saltionsatka/TodoList" target="_blank" class="project-link">
+            <i class="fa-brands fa-github"></i> View on GitHub
+          </a>
+        </article>
+
+        <article class="project-card">
+          <h3>User Management App</h3>
+          <p>
+            Application focused on managing users, demonstrating CRUD operations, forms, and typical admin-style
+            workflows that are common in real back-office systems.
+          </p>
+          <a href="https://github.com/saltionsatka/user-management-app" target="_blank" class="project-link">
+            <i class="fa-brands fa-github"></i> View on GitHub
+          </a>
+        </article>
+      </div>
+
+      <p class="section-subtitle small">
+        To add more projects in the future, just duplicate one of the <code>.project-card</code> blocks in this section
+        and update the name, description, and GitHub link.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="section-inner reveal">
+      <h2>Contact</h2>
+      <p>
+        If you think I’d be a good fit for your team in Malta (or remote), feel free to reach out. I’m open to
+        backend, full-stack, or cloud-oriented roles where I can keep learning and contribute to real products.
+      </p>
+
+      <div class="contact-grid">
+        <a href="mailto:saltionsatka@gmail.com" class="contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <span>Email</span>
+          <small>saltionsatka@gmail.com</small>
+        </a>
+        <a href="https://www.linkedin.com/in/saltionsatka" target="_blank" class="contact-item">
+          <i class="fa-brands fa-linkedin"></i>
+          <span>LinkedIn</span>
+          <small>linkedin.com/in/saltionsatka</small>
+        </a>
+        <a href="https://github.com/saltionsatka" target="_blank" class="contact-item">
+          <i class="fa-brands fa-github"></i>
+          <span>GitHub</span>
+          <small>github.com/saltionsatka</small>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© <span id="year"></span> Saltion Satka — Portfolio hosted on GitHub Pages</p>
   </footer>
 
-  <script>
-    const username = "saltion-satka";
-    const repoList = document.getElementById("repo-list");
-
-    fetch(`https://api.github.com/users/${username}/repos`)
-      .then(res => res.json())
-      .then(repos => {
-        repoList.innerHTML = "";
-        repos.forEach(repo => {
-          repoList.innerHTML += `
-            <div class="card">
-              <h3>${repo.name}</h3>
-              <p>${repo.description || "No description available"}</p>
-              <a class="btn" href="${repo.html_url}" target="_blank">View Repo</a>
-            </div>
-          `;
-        });
-      });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
