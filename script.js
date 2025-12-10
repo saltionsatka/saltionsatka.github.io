@@ -1,27 +1,28 @@
-// Reveal / Hide on scroll (fade-in on scroll down, fade-out on scroll up)
+// Fade in when a .reveal element enters the viewport,
+// fade out again when it leaves (both scrolling down and up).
 
 const reveals = document.querySelectorAll(".reveal");
 
-function handleReveal() {
-  const windowHeight = window.innerHeight;
-  const threshold = 120;
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Element is inside viewport -> fade in
+        entry.target.classList.add("visible");
+      } else {
+        // Element completely outside viewport -> fade out
+        entry.target.classList.remove("visible");
+      }
+    });
+  },
+  {
+    // 0.15 = element is considered "visible" when at least 15% is in view
+    threshold: 0.15,
+  }
+);
 
-  reveals.forEach(el => {
-    const rect = el.getBoundingClientRect();
-
-    // Fade IN when scroll down
-    if (rect.top < windowHeight - threshold) {
-      el.classList.add("visible");
-    } 
-    // Fade OUT when scroll up
-    else {
-      el.classList.remove("visible");
-    }
-  });
-}
-
-window.addEventListener("scroll", handleReveal);
-window.addEventListener("load", handleReveal);
+// Observe every .reveal element
+revels.forEach((el) => observer.observe(el));
 
 // Dynamic year in footer
 const yearSpan = document.getElementById("year");
